@@ -1,4 +1,8 @@
+import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Bank } from '../bank';
+import { BankService } from '../bank.service';
+
 
 @Component({
   selector: 'app-banks',
@@ -7,9 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BanksComponent implements OnInit {
 
-  constructor() { }
+  public banksList: Bank[] = [];
+  constructor(private bankService : BankService) {}
 
-  ngOnInit(): void {
-  }
-
+    public getBanks(): void {
+      this.bankService.getBanks().subscribe(
+        (response : Bank[] )=>{
+          this.banksList = response;
+        }
+      );
+    }
+    ngOnInit() {
+      this.getBanks();
+    }
 }

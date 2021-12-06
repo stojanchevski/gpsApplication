@@ -10,6 +10,9 @@ import { OilsComponent } from './oils/oils.component';
 import { ShopsComponent } from './shops/shops.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BankService } from './bank.service';
+
 
 @NgModule({
   declarations: [
@@ -24,9 +27,10 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BankService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
