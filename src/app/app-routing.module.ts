@@ -7,6 +7,9 @@ import { HotelsComponent } from './hotels/hotels.component';
 import { OilsComponent } from './oils/oils.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { ShopsComponent } from './shops/shops.component';
+import { AgmCoreModule } from '@agm/core';
+import { CommonModule } from '@angular/common';
+
 
 const routes: Routes = [
   {path:'',component:HomePageComponent},
@@ -19,7 +22,14 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBgcsVWVj2VvSML42qOVGKeCfaSPadRyss',
+      libraries: ['']
+    }),
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

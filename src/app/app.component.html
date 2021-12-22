@@ -1,3 +1,14 @@
 <router-outlet></router-outlet>
 
 
+
+<!-- <h1>
+  Please open it in full screen mode <br>
+  your current location is:- <br>
+  lat:{{lat}}<br>
+  lng:{{lng}}
+</h1> -->
+
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>

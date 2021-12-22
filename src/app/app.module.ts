@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +12,9 @@ import { HotelsComponent } from './hotels/hotels.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BankService } from './bank.service';
+import { FormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
+
 
 
 @NgModule({
@@ -28,7 +31,12 @@ import { BankService } from './bank.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBgcsVWVj2VvSML42qOVGKeCfaSPadRyss',
+      // libraries: ['']
+    })
   ],
   providers: [BankService],
   bootstrap: [AppComponent]
