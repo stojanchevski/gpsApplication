@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BankService } from './bank.service';
 import { FormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
+import { MapTestComponent } from './map-test/map-test.component';
 
 
 
@@ -26,7 +27,8 @@ import { AgmCoreModule } from '@agm/core';
     OilsComponent,
     ShopsComponent,
     HotelsComponent,
-    RestaurantsComponent
+    RestaurantsComponent,
+    MapTestComponent
   ],
   imports: [
     BrowserModule,

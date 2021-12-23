@@ -9,11 +9,12 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { ShopsComponent } from './shops/shops.component';
 import { AgmCoreModule } from '@agm/core';
 import { CommonModule } from '@angular/common';
+import { MapTestComponent } from './map-test/map-test.component';
 
 
 const routes: Routes = [
   {path:'',component:HomePageComponent},
-  {path:'banks',component:BanksComponent},
+  {path:'banks',component:MapTestComponent},
   {path:'beaches',component:BeachesComponent},
   {path:'hotels',component:HotelsComponent},
   {path:'oils',component:OilsComponent},
