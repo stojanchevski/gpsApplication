@@ -31,72 +31,13 @@
                     <div class="col-lg-7">
                         <form action="/" class="mb-4 mb-lg-0">
                             <div class="form-row">
-                                <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Име на продавницата" />
-                                    <a>Или пак изберете од менито подолу:</a>
-                                </div>
                             </div>
-                            <div class="dropdown">
-                              <button class="dropbtn">Избери продавница</button>
-                              <div class="dropdown-content">
-                              <a href="#">Tinex Supermarket
-
-
-                              </a>
-                                <a href="#">Ma Lamont
-
-
-                                </a>
-                                <a href="#">Stop Shop
-
-
-                                </a>
-                                <a href="#">Bizim Inci
-
-
-                                </a>
-                                <a href="#">Moni Trejd
-
-
-
-                                </a>
-                                <a href="#">Kipper 50
-
-
-                                </a>
-                                <a href="#">DON
-
-
-                                </a>
-                                <a href="#">Top Market
-
-
-                                </a>
-                                <a href="#">Ideal Market
-
-
-                                </a>
-                                <a href="#">Tamaro 1
-
-
-                                </a>
-                                <a href="#">Fresko
-
-                                </a>
-                                <a href="#">Papa's Food Ohrid
-
-
-                                </a>
-                                <a href="#">Ramstore Express
-
-
-                                </a>
-                                <a href="#">Tamaro Market 12
-
-
-                                </a>
-                              </div>
-                            </div>
+                            <select >
+                              <option value="default">----</option>
+                              <option *ngFor="let grocery of groceriesList" [value]="grocery">
+                                {{grocery.name}}
+                              </option>
+                            </select>
                         </form>
                     </div>
 

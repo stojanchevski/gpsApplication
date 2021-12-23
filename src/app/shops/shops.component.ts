@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Grocery } from '../models/grocery';
+import { GroceryService } from '../services/grocery.service';
 
 @Component({
   selector: 'app-shops',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopsComponent implements OnInit {
 
-  constructor() { }
+  groceriesList : Grocery[];
+  constructor(private groceryService : GroceryService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getGroceries();
   }
+
+    public getGroceries(): void {
+      this.groceryService.getGroceries().subscribe(data =>{
+        this.groceriesList = data;}
+      );
+    }
 
 }

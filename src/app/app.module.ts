@@ -11,10 +11,11 @@ import { ShopsComponent } from './shops/shops.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { HttpClientModule } from '@angular/common/http';
-import { BankService } from './bank.service';
+import { BankService } from './services/bank.service';
 import { FormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { MapTestComponent } from './map-test/map-test.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 
 
@@ -28,7 +29,7 @@ import { MapTestComponent } from './map-test/map-test.component';
     ShopsComponent,
     HotelsComponent,
     RestaurantsComponent,
-    MapTestComponent
+    MapTestComponent,
   ],
   imports: [
     BrowserModule,

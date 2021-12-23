@@ -14,7 +14,7 @@ import { MapTestComponent } from './map-test/map-test.component';
 
 const routes: Routes = [
   {path:'',component:HomePageComponent},
-  {path:'banks',component:MapTestComponent},
+  {path:'banks',component:BanksComponent},
   {path:'beaches',component:BeachesComponent},
   {path:'hotels',component:HotelsComponent},
   {path:'oils',component:OilsComponent},

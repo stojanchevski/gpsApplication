@@ -1,4 +1,4 @@
-export interface Bank{
+export class Restaurant{
   id : number;
   name : string;
   address : string;

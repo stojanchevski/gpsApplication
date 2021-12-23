@@ -31,44 +31,13 @@
                     <div class="col-lg-7">
                         <form action="/" class="mb-4 mb-lg-0">
                             <div class="form-row">
-                                <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Име на плажа" />
-                                    <a>Или пак изберете од менито подолу:</a>
-                                </div>
                             </div>
-                            <div class="dropdown">
-                              <button class="dropbtn">Избери плажа</button>
-                              <div class="dropdown-content">
-                                <a href="#">Golden Beach
-                                </a>
-                                <a href="#">Nensi Beach Ohrid
-
-                                </a>
-                                <a href="#">Beach Gradishte 4
-
-                                </a>
-                                <a href="#">Jungle Beach
-
-                                </a>
-                                <a href="#">Lagadin Ohrid beach
-
-                                </a>
-                                <a href="#">Kadmo Lounge Bar
-
-                                </a>
-                                <a href="#">Orevche
-
-                                </a>
-                                <a href="#">Egoist Beach Bar & Restaurant
-
-                                </a>
-                                <a href="#">Atlantic Beach Ohrid
-
-                                </a>
-                                <a href="#">Buffalo Beach
-                                </a>
-                              </div>
-                            </div>
+                            <select >
+                              <option value="default">----</option>
+                              <option *ngFor="let beach of beachesList" [value]="beach">
+                                {{beach.name}}
+                              </option>
+                            </select>
                         </form>
                     </div>
 

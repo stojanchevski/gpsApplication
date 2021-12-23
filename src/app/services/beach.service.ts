@@ -2,15 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Bank } from './bank';
+import { Beach } from '../models/beach';
 
 @Injectable({ providedIn: 'root'})
-export class BankService {
-  private apiServerUrl =environment.apiBaseURL;
+export class BeachService {
+  private apiServerUrl ="http://localhost:8080/beaches";
 
   constructor(private http: HttpClient) { }
 
-  public getBanks(): Observable <Bank[]> {
-    return this.http.get<Bank[]>('${this.apiServerUrl}/banks')
+  public getBeaches(): Observable <Beach[]> {
+    return this.http.get<Beach[]>(`${this.apiServerUrl}`);
   }
 }

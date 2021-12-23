@@ -31,43 +31,13 @@
                     <div class="col-lg-7">
                         <form action="/" class="mb-4 mb-lg-0">
                             <div class="form-row">
-                                <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Име на хотел" />
-                                    <a>Или пак изберете од менито подолу:</a>
-                                </div>
                             </div>
-                            <div class="dropdown">
-                              <button class="dropbtn">Избери хотел</button>
-                              <div class="dropdown-content">
-                              <a href="#">Hotel Tino Sveti Stefan
-                              </a>
-                                <a href="#">Hotel Cingo
-                                </a>
-                                <a href="#">Hotel Drim
-                                </a>
-                                <a href="#">Hotel Village
-                                </a>
-                                <a href="#">Royal View
-                                </a>
-                                <a href="#">City Inn
-                                </a>
-                                <a href="#">Villa St. Nicholas
-                                </a>
-                                <a href="#">Villa Veron
-                                </a>
-                                <a href="#">Villa White Lake
-                                </a>
-                                <a href="#">Villa Bella Ohrid
-                                </a>
-                                <a href="#">Apartment Exclusive
-                                </a>
-                                <a href="#">Villa Lucija
-                                </a>
-                                <a href="#">Apartments Joce
-                                </a>
-
-                              </div>
-                            </div>
+                            <select >
+                              <option value="default">----</option>
+                              <option *ngFor="let hotel of hotelsList" [value]="hotel">
+                                {{hotel.name}}
+                              </option>
+                            </select>
                         </form>
                     </div>
 

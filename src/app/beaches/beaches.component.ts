@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Beach } from '../models/beach';
+import { BeachService } from '../services/beach.service'
 
 @Component({
   selector: 'app-beaches',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BeachesComponent implements OnInit {
 
-  constructor() { }
+  beachesList : Beach[];
+  constructor(private beachService : BeachService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getBeaches();
   }
+
+    public getBeaches(): void {
+      this.beachService.getBeaches().subscribe(data =>{
+        this.beachesList = data;}
+      );
+    }
 
 }

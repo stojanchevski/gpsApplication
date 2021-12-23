@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { gasStation } from '../models/gasStation';
+import { GasStationService } from '../services/gas-station.service';
 
 @Component({
   selector: 'app-oils',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OilsComponent implements OnInit {
 
-  constructor() { }
+  stationsList : gasStation[];
+  constructor(private gasStaionService : GasStationService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getStations();
   }
+
+    public getStations(): void {
+      this.gasStaionService.getStations().subscribe(data =>{
+        this.stationsList = data;}
+      );
+    }
 
 }

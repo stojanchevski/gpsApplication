@@ -1,7 +1,7 @@
 import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Bank } from '../bank';
-import { BankService } from '../bank.service';
+import { Bank } from '../models/bank';
+import { BankService } from '../services/bank.service';
 
 
 @Component({
@@ -11,17 +11,20 @@ import { BankService } from '../bank.service';
 })
 export class BanksComponent implements OnInit {
 
-  public banksList: Bank[] = [];
+  banksList:Bank[];
   constructor(private bankService : BankService) {}
+  ngOnInit() {
+    this.getBanks();
+  }
 
     public getBanks(): void {
-      this.bankService.getBanks().subscribe(
-        (response : Bank[] )=>{
-          this.banksList = response;
-        }
+      this.bankService.getBanks().subscribe(data =>{
+        this.banksList = data;}
       );
     }
-    ngOnInit() {
-      this.getBanks();
-    }
+    // selected = "----"
+    // update(e){
+    //   this.selected = e.target.value
+    // }
+
 }
