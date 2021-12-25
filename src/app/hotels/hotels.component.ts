@@ -9,6 +9,7 @@ import { HotelService } from '../services/hotel.service';
 })
 export class HotelsComponent implements OnInit {
 
+  hotelsSelected:number;
   hotelsList : Hotel[];
   constructor(private hotelService : HotelService) {}
 
@@ -21,5 +22,7 @@ export class HotelsComponent implements OnInit {
         this.hotelsList = data;}
       );
     }
+
+
 
 }

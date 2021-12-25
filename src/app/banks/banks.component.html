@@ -34,18 +34,27 @@
 
                             </div>
                             <h3>Изберете ја бараната банка од менито подолу</h3>
-                            <select >
-                              <option value="default">----</option>
-                              <option *ngFor="let player of banksList" [value]="player">
-                                {{player.name}}
+                            <select>
+                              <option *ngFor="let bank of banksList" [value]="bank.name">
+                                {{bank.name}}
                               </option>
                             </select>
                         </form>
                     </div>
                     <div class="col-lg-5">
-                        <div class="map">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d10110.55541532532!2d20.801734192200847!3d41.115178345252446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbanks%20in%20ohrid!5e0!3m2!1smk!2smk!4v1638715604310!5m2!1smk!2smk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
+                      <div class="map"
+    leaflet
+    [leafletOptions]="options"
+    (leafletMapReady)="onMapReady($event)"
+    (leafletClick)="onMapClick($event)"
+  >
+
+</div>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
                     </div>
                 </div>
                 <button type="button" class="btn btn-primary btn-sm" routerLink="">Назад кон почетна</button>

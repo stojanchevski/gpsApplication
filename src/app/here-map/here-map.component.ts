@@ -23,7 +23,6 @@ export class HereMapComponent implements OnInit, OnChanges {
   }
 constructor() {
 
-
    }
   lat: number=0;
   lng: number=0;
@@ -36,7 +35,6 @@ constructor() {
           this.lat = position.coords.latitude;
           this.lng = position.coords.longitude;
           this.addMarker(latLng(this.lat,this.lng));
-
         }
 
       },

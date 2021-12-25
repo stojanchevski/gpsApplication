@@ -32,13 +32,14 @@
                         <form action="/" class="mb-4 mb-lg-0">
                             <div class="form-row">
                             </div>
-                            <select >
-                              <option value="default">----</option>
+                            <select>
                               <option *ngFor="let hotel of hotelsList" [value]="hotel">
                                 {{hotel.name}}
+                                <br>
                               </option>
                             </select>
                         </form>
+                        <!-- Selected value is {{hotelsSelected.name}} -->
                     </div>
 
                     <div class="col-lg-5">

@@ -19,6 +19,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { RateStarsComponent } from './rate-stars/rate-stars.component';
 import { HereMapComponent } from './here-map/here-map.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NgSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
