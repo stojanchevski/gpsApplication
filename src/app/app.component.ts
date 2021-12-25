@@ -5,23 +5,25 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-  public start: string;
-  public finish: string;
+  // public start: string;
+  // public finish: string;
   title: any;
+  lat:number ;
+  lng:number=0;
 
   public constructor() {
-      this.start = "37.7397,-121.4252";
-      this.finish = "37.6819,-121.7680";
+     this.lat = 0;
+     this.lng = 0;
   }
 
-  public ngOnInit():void{
-    // this.getLocation();
-  }
+  // public ngOnInit():void{
+  //    this.getLocation();
+  // }
 
 
-  // getLocation(){
+  // public getLocation(){
   //   if (navigator.geolocation) {
   //     navigator.geolocation.getCurrentPosition((position: GeolocationPosition) => {
   //       if (position) {
@@ -30,7 +32,7 @@ export class AppComponent implements OnInit {
   //         this.lat = position.coords.latitude;
   //         this.lng = position.coords.longitude;
   //         console.log(this.lat);
-  //         console.log(this.lat);
+  //         console.log(this.lng);
   //       }
   //     },
   //       (error: GeolocationPositionError) => console.log(error));

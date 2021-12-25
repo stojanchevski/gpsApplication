@@ -1,8 +1,12 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { tileLayer, latLng, LeafletMouseEvent, LatLng, Map, Marker, Icon, Point } from 'leaflet';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { AppComponent } from '../app.component';
 import * as L from 'leaflet';
 import 'leaflet-routing-machine';
+import { MyLocationService } from '../services/my-location.service';
+
+
 
 @Component({
     selector: 'here-map',
@@ -14,12 +18,41 @@ export class HereMapComponent implements OnInit, OnChanges {
     throw new Error('Method not implemented.');
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+      this.getLocation();
+
   }
+constructor() {
+
+
+   }
+  lat: number=0;
+  lng: number=0;
+  public getLocation(){
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position: GeolocationPosition) => {
+        if (position) {
+          console.log("Latitude: " + position.coords.latitude +
+            "Longitude: " + position.coords.longitude);
+          this.lat = position.coords.latitude;
+          this.lng = position.coords.longitude;
+          this.addMarker(latLng(this.lat,this.lng));
+
+        }
+
+      },
+        (error: GeolocationPositionError) => console.log(error));
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  }
+
+
 
   title = 'osm-routing-demo';
   map = undefined;
   markers = [];
+
+
   options = {
     layers: [
       tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -27,16 +60,21 @@ export class HereMapComponent implements OnInit, OnChanges {
       })
     ],
     zoom: 13,
-    center: latLng([41.111080744402265, 20.804597583978214]),
+    center: latLng([this.lat,this.lng]),
     attributionControl: false
   };
   onMapReady(map: Map) {
     this.map = map;
+    console.log(this.lat);
+    console.log(this.lng);
+
+
   }
 
   onMapClick(event: LeafletMouseEvent) {
     // console.log(event.latlng);
     this.addMarker(event.latlng);
+
   }
 
   addMarker(pos: LatLng) {
@@ -64,5 +102,8 @@ export class HereMapComponent implements OnInit, OnChanges {
       showAlternatives: true
     });
     routing.addTo(this.map);
+
   }
+
+
 }
