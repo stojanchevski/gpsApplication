@@ -16,7 +16,9 @@ import { FormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { MapTestComponent } from './map-test/map-test.component';
 import { RouterTestingModule } from '@angular/router/testing';
-
+import { RateStarsComponent } from './rate-stars/rate-stars.component';
+import { HereMapComponent } from './here-map/here-map.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 
 @NgModule({
@@ -30,18 +32,17 @@ import { RouterTestingModule } from '@angular/router/testing';
     HotelsComponent,
     RestaurantsComponent,
     MapTestComponent,
+    RateStarsComponent,
+    HereMapComponent
   ],
   imports: [
     BrowserModule,
+    LeafletModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBgcsVWVj2VvSML42qOVGKeCfaSPadRyss',
-      // libraries: ['']
-    })
   ],
-  providers: [BankService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

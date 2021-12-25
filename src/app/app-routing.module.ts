@@ -10,6 +10,7 @@ import { ShopsComponent } from './shops/shops.component';
 import { AgmCoreModule } from '@agm/core';
 import { CommonModule } from '@angular/common';
 import { MapTestComponent } from './map-test/map-test.component';
+import { HereMapComponent } from './here-map/here-map.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path:'hotels',component:HotelsComponent},
   {path:'oils',component:OilsComponent},
   {path:'restaurants',component:RestaurantsComponent},
-  {path:'shops',component:ShopsComponent}
+  {path:'shops',component:ShopsComponent},
+  {path:'maps',component:HereMapComponent}
 ];
 
 @NgModule({
