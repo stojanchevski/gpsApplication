@@ -13,10 +13,9 @@
 
 body{
   background-color: gray;
-  height: 100vh;
   margin: 0;
   overflow: hidden;
-
+  min-height: 100%;
 }
 #html1 {
   /* To make use of full height of page*/

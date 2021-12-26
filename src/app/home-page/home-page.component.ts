@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
+import { of } from 'rxjs';
+
+
 
 @Component({
   selector: 'app-home-page',
@@ -7,10 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
+  
+  average:number = 4.2;
   constructor() { }
 
   stars: number[] = [1, 2, 3, 4, 5];
-
+  ngOnChanges(changes: SimpleChanges): void {
+    throw new Error('Method not implemented.');
+  }
   ngOnInit(): void {
   }
 
