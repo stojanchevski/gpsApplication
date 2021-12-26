@@ -13,10 +13,6 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  countStar(star){
-    this.selectedValue = star;
-    console.log('Value of star', star);
-  }
 
   onClickEvent(event:any){
     console.log(event.targe.value)
