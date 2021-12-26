@@ -64,6 +64,21 @@
   display: block;
 }
 
+.map{
+  margin-left: auto;
+  margin-right: auto;
+  border: 120px;
+  border-radius: 2%;
+  width: 90%;
+  height: 800px;
+}
+.voved{
+  text-align: center;
+}
+
+body{
+  background-color: gray;
+}
 .dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}

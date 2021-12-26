@@ -18,10 +18,11 @@ const routes: Routes = [
   {path:'banks',component:BanksComponent},
   {path:'beaches',component:BeachesComponent},
   {path:'hotels',component:HotelsComponent},
-  {path:'oils',component:OilsComponent},
+  {path:'gas-stations',component:OilsComponent},
   {path:'restaurants',component:RestaurantsComponent},
-  {path:'shops',component:ShopsComponent},
-  {path:'maps',component:HereMapComponent}
+  {path:'groceries',component:ShopsComponent},
+  {path:'maps',component:HereMapComponent},
+  {path:'test',component:MapTestComponent}
 ];
 
 @NgModule({

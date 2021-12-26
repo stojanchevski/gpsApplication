@@ -29,13 +29,13 @@
         <br>
         <i class="fas fa-map" style="color:#000" ></i> <a routerLink="/beaches"> Плажи </a><br>
         <br>
-        <i class="fas fa-map" style="color:#000" ></i><a routerLink="/oils"> Бензински пумпи </a><br>
+        <i class="fas fa-map" style="color:#000" ></i><a routerLink="/gas-stations"> Бензински пумпи </a><br>
         <br>
-        <i class="fa fa-map" style="color:#000" ></i> <a routerLink="/shops">Продавници</a><br>
+        <i class="fa fa-map" style="color:#000" ></i> <a routerLink="/groceries">Продавници</a><br>
         <br>
         <i class="fa fa-map" style="color:#000" ></i> <a routerLink="/hotels">Хотели</a><br>
         <br>
-        <i class="fa fa-map" style="color:#000" ></i> <a routerLink="/hotels">Ресторани</a><br>
+        <i class="fa fa-map" style="color:#000" ></i> <a routerLink="/restaurants">Ресторани</a><br>
       </div>
   </div>
 </div>
@@ -44,21 +44,20 @@
 
 <html>
 
-  <a id="rating">Твоја оцена:</a>
-<body>
-  <div class="rate">
-    <input type="radio" id="star5" name="rate" value="5" />
-    <label for="star5" title="text">5 stars</label>
-    <input type="radio" id="star4" name="rate" value="4" />
-    <label for="star4" title="text">4 stars</label>
-    <input type="radio" id="star3" name="rate" value="3" />
-    <label for="star3" title="text">3 stars</label>
-    <input type="radio" id="star2" name="rate" value="2" />
-    <label for="star2" title="text">2 stars</label>
-    <input type="radio" id="star1" name="rate" value="1" />
-    <label for="star1" title="text">1 star</label>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <div class="stars">
+    <form action="" (ngSubmit)="$event" (click)="onClickEvent($event)">
+      <input class="star star-5" id="star-5" type="radio" value="5" name="star"/>
+      <label class="star star-5" for="star-5"></label>
+      <input class="star star-4" id="star-4" type="radio" value="5" name="star"/>
+      <label class="star star-4" for="star-4"></label>
+      <input class="star star-3" id="star-3" type="radio" value="5" name="star"/>
+      <label class="star star-3" for="star-3"></label>
+      <input class="star star-2" id="star-2" type="radio" value="5" name="star"/>
+      <label class="star star-2" for="star-2"></label>
+      <input class="star star-1" id="star-1" type="radio" value="5" name="star"/>
+      <label class="star star-1" for="star-1"></label>
+    </form>
   </div>
-</body>
-
 </html>
 <br><br>

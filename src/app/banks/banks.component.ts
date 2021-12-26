@@ -77,16 +77,13 @@ export class BanksComponent implements OnInit, OnChanges {
       this.map = map;
       console.log(this.lat);
       console.log(this.lng);
-      this.addMarker(latLng([0.0,0.2]))
-
-
     }
 
     onMapClick(event: LeafletMouseEvent) {
       // console.log(event.latlng);
       this.addMarker(event.latlng);
-
     }
+
 
     addMarker(pos: LatLng) {
       const marker = new Marker(pos);
@@ -114,6 +111,14 @@ export class BanksComponent implements OnInit, OnChanges {
       });
       routing.addTo(this.map);
 
+    }
+    onSelectChange(event:any){
+
+      console.log(event.target.value);
+      var objToUse = this.banksList.find(x=>x.name == event.target.value);
+      console.log(objToUse)
+      console.log(Number(objToUse.latitude));
+      this.addMarker(latLng(Number(objToUse.latitude),Number(objToUse.longitude)));
     }
 
 
