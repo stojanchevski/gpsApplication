@@ -9,8 +9,6 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { ShopsComponent } from './shops/shops.component';
 import { AgmCoreModule } from '@agm/core';
 import { CommonModule } from '@angular/common';
-import { MapTestComponent } from './map-test/map-test.component';
-import { HereMapComponent } from './here-map/here-map.component';
 
 
 const routes: Routes = [
@@ -21,8 +19,6 @@ const routes: Routes = [
   {path:'gas-stations',component:OilsComponent},
   {path:'restaurants',component:RestaurantsComponent},
   {path:'groceries',component:ShopsComponent},
-  {path:'maps',component:HereMapComponent},
-  {path:'test',component:MapTestComponent}
 ];
 
 @NgModule({

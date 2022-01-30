@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
+//unused imports removed
 import { HomePageComponent } from './home-page.component';
 
 describe('HomePageComponent', () => {

@@ -1,14 +1,9 @@
-
-import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { tileLayer, latLng, LeafletMouseEvent, LatLng, Map, Marker, Icon, Point } from 'leaflet';
-import { HereMapComponent } from '../here-map/here-map.component';
 import { Bank } from '../models/bank';
 import { BankService } from '../services/bank.service';
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import * as L from 'leaflet';
 import 'leaflet-routing-machine';
-import { MyLocationService } from '../services/my-location.service';
 
 
 @Component({

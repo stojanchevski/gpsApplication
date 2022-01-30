@@ -18,28 +18,6 @@ export class AppComponent {
      this.lng = 0;
   }
 
-  // public ngOnInit():void{
-  //    this.getLocation();
-  // }
-
-
-  // public getLocation(){
-  //   if (navigator.geolocation) {
-  //     navigator.geolocation.getCurrentPosition((position: GeolocationPosition) => {
-  //       if (position) {
-  //         console.log("Latitude: " + position.coords.latitude +
-  //           "Longitude: " + position.coords.longitude);
-  //         this.lat = position.coords.latitude;
-  //         this.lng = position.coords.longitude;
-  //         console.log(this.lat);
-  //         console.log(this.lng);
-  //       }
-  //     },
-  //       (error: GeolocationPositionError) => console.log(error));
-  //   } else {
-  //     alert("Geolocation is not supported by this browser.");
-  //   }
-
-  // }
+  //unused code removed
 
 }
